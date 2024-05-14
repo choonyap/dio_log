@@ -15,11 +15,10 @@ showDebugBtn(BuildContext context, {Widget? button, Color? btnColor}) async {
     await Future.delayed(Duration(milliseconds: 500));
     dismissDebugBtn();
     itemEntry = OverlayEntry(
-        builder: (BuildContext context) =>
-            button ?? DraggableButtonWidget(btnColor: btnColor));
+        builder: (BuildContext context) => button ?? DraggableButtonWidget(btnColor: btnColor));
 
     ///显示悬浮menu
-    Overlay.of(context)?.insert(itemEntry!);
+    Overlay.of(context).insert(itemEntry!);
   } catch (e) {}
 }
 
